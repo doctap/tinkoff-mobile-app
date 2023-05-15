@@ -1,0 +1,12 @@
+{
+  "extends": "@tsconfig/react-native/tsconfig.json",
+  "compilerOptions": {},
+  "include": [
+    "src",
+    "tests/mocks",
+    "tests/setupTests.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}
