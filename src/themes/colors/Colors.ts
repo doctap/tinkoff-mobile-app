@@ -1,0 +1,1 @@
+export const ButtonActionColors = ['#f7d21b', '#ddcd55'] as const;

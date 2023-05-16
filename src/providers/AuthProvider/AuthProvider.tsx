@@ -6,6 +6,7 @@ import { auth, db, login, logout, register } from '../../firebase';
 
 interface IContext {
   user: User | null
+  isLoading: boolean
   login: (email: string, password: string) => void
   register: (email: string, password: string) => void
   logout: () => void
