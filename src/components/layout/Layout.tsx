@@ -4,12 +4,14 @@ import { styleWrapper } from '../../styles';
 
 interface ILayout {
   children: React.ReactNode
-  isScrollView: boolean
+  isScrollView?: boolean
 }
 export const Layout = (prop: ILayout) => {
   return (
-    <View style={styles.wrap}>
-      {prop.isScrollView
+    <View
+      style={styles.wrap}
+    >
+      {prop.isScrollView ?? false
         ? <ScrollView>{prop.children}</ScrollView>
         : prop.children}
     </View>

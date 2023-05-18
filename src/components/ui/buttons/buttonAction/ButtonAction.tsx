@@ -15,6 +15,7 @@ export const ButtonAction = (prop: IButtonAction) => {
         ...styles.button
       }}
       underlayColor={prop.colors[1]}
+      onPress={prop.onPress}
     >
       <Text style={styles.name}>
         {prop.name}
@@ -27,7 +28,7 @@ const styles = StyleSheet.create({
   button: {
     color: 'grey',
     borderRadius: 10,
-    padding: 3
+    padding: 10,
   },
   name: {
     textAlign: 'center'

@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { styleWrapper } from '../../../styles';
 import { useAuth } from '../../../hooks';
 import { ButtonAction, Field, Spinner } from '../..';
-import { ButtonActionColors } from '../../../themes';
+import { ButtonActionColors, ColorGrey800 } from '../../../themes';
 
 interface IData {
   email: string
@@ -12,8 +12,18 @@ interface IData {
 
 export const Auth = () => {
   const [data, setData] = useState({} as IData)
-  const { isLoading } = useAuth();
+  const { isLoading, login, register } = useAuth();
   const [isReg, setIsReg] = useState(false);
+
+  const authHandler = async () => {
+    const { email, password } = data;
+
+    isReg
+      ? await register(email, password)
+      : await login(email, password);
+
+    setData({} as IData);
+  }
 
   return (
     <View style={styles.wrap}>
@@ -43,12 +53,12 @@ export const Auth = () => {
               <ButtonAction
                 colors={ButtonActionColors}
                 name={`Let's go`}
-                onPress={() => 0}
+                onPress={() => { authHandler(); }}
               />
 
               <Pressable onPress={() => setIsReg(!isReg)}>
                 <Text style={styles.pressable}>
-                  {isReg ? 'Register' : 'Login'}
+                  {!isReg ? 'Register' : 'Login'}
                 </Text>
               </Pressable>
             </>}
@@ -70,9 +80,10 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    color: 'grey',
+    color: ColorGrey800,
     fontWeight: 'bold',
-    fontSize: 25
+    fontSize: 25,
+    marginBottom: 20
   },
   fields: {
     height: 85,
@@ -82,10 +93,11 @@ const styles = StyleSheet.create({
     marginBottom: 15
   },
   pressable: {
-    color: 'grey',
+    color: ColorGrey800,
     opacity: 30,
     textAlign: 'right',
-    fontSize: 14
+    fontSize: 14,
+    marginTop: 10
   },
   ...styleWrapper
 });

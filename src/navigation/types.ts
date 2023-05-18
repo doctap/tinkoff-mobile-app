@@ -1,4 +1,4 @@
-export const RootStackParamList = {
+export type TypeRootStackParamList = {
   Auth: undefined,
   Home: undefined,
   Profile: undefined,
@@ -7,5 +7,3 @@ export const RootStackParamList = {
   Payments: undefined,
   More: undefined,
 }
-
-export type TypeRootStackParamList = typeof RootStackParamList;

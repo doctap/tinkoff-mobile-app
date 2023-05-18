@@ -1,10 +1,14 @@
-import React from 'react'
-import { Text, View } from 'react-native'
+import React from 'react';
+import { Text, View } from 'react-native';
+import { useProfile } from '../../../hooks';
+import { Heading, Layout } from '../..';
 
 export const Profile = () => {
+  const { isLoading: isProfileLoading, name, setName } = useProfile();
+
   return (
-    <View>
-      <Text>Profile</Text>
-    </View>
+    <Layout>
+      <Heading text='Profile' />
+    </Layout>
   )
 }

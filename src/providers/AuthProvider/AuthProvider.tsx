@@ -33,7 +33,7 @@ export const AuthProvider = (prop: IAuthProvider) => {
         displayName: 'No name'
       })
     } catch (error: any) {
-      Alert.alert('Error registration:', error);
+      Alert.alert('Error registration:', error.message.toString());
     } finally {
       setIsLoading(false);
     }
@@ -44,7 +44,7 @@ export const AuthProvider = (prop: IAuthProvider) => {
     try {
       await login(email, password);
     } catch (error: any) {
-      Alert.alert('Error login:', error);
+      Alert.alert('Error login:', error.message.toString());
     } finally {
       setIsLoading(false);
     }
@@ -55,7 +55,7 @@ export const AuthProvider = (prop: IAuthProvider) => {
     try {
       await logout();
     } catch (error: any) {
-      Alert.alert('Error login:', error);
+      Alert.alert('Error login:', error.message.toString());
     } finally {
       setIsLoading(false);
     }
