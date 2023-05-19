@@ -18,7 +18,7 @@ export const Avatar = (prop: IAvatar) => {
         color: 'white',
         fontWeight: '700'
       }}>
-        {prop.name.slice(0, 1)}
+        {prop.name.slice(0, 1).toUpperCase()}
       </Text>
     </View>
   );
