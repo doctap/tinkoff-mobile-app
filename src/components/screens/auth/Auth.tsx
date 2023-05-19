@@ -36,11 +36,11 @@ export const Auth = () => {
           {isLoading
             ? <Spinner />
             : <>
-              <View style={styles.fields}>
                 <Field
                   onChange={email => setData({ ...data, email })}
                   placeholder='email'
                   value={data.email}
+                  marginBottom={10}
                 />
                 <Field
                   onChange={password => setData({ ...data, password })}
@@ -48,7 +48,6 @@ export const Auth = () => {
                   value={data.password}
                   isSecure
                 />
-              </View>
 
               <ButtonAction
                 colors={YellowActionButton}
@@ -85,19 +84,11 @@ const styles = StyleSheet.create({
     fontSize: 25,
     marginBottom: 20
   },
-  fields: {
-    height: 85,
-    flex: 0,
-    flexDirection: 'column',
-    justifyContent: 'space-between',
-    marginBottom: 15
-  },
   pressable: {
     color: ColorGrey800,
     opacity: 30,
     textAlign: 'right',
     fontSize: 14,
-    marginTop: 10
   },
   ...styleWrapper
 });
