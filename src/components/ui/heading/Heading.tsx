@@ -1,12 +1,23 @@
 import React, { FC } from 'react';
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, StyleSheet } from 'react-native';
 import { ColorGrey800 } from '../../../themes';
-import { PaddingContainer } from '..';
+import { PaddingContainer } from '../';
 
-export const Heading: FC<{ text: string }> = ({ text }) => {
+interface IHeading {
+  text: string
+  justify?: JustifyContentType
+}
+
+export type JustifyContentType = 'flex-start' | 'center' | 'flex-end';
+
+export const Heading = (prop: IHeading) => {
   return (
-    <PaddingContainer>
-      <Text>{text}</Text>
+    <PaddingContainer style={{
+      flex: 0,
+      flexDirection: 'row',
+      justifyContent: prop.justify
+    }}>
+      <Text style={styles.heading}>{prop.text}</Text>
     </PaddingContainer>
   );
 };
@@ -14,6 +25,7 @@ export const Heading: FC<{ text: string }> = ({ text }) => {
 const styles = StyleSheet.create({
   heading: {
     color: ColorGrey800,
-    fontSize: 25
+    fontSize: 25,
+    fontWeight: '600'
   }
 });

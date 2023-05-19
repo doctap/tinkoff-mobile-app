@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { StyleSheet, Text, View, Pressable } from 'react-native';
-import { styleWrapper } from '../../../styles';
+import { styleWrapper } from '../../../styles/styles';
 import { useAuth } from '../../../hooks';
 import { ButtonAction, Field, Spinner } from '../..';
-import { ButtonActionColors, ColorGrey800 } from '../../../themes';
+import { YellowActionButton, ColorGrey800 } from '../../../themes';
 
 interface IData {
   email: string
@@ -51,7 +51,7 @@ export const Auth = () => {
               </View>
 
               <ButtonAction
-                colors={ButtonActionColors}
+                colors={YellowActionButton}
                 name={`Let's go`}
                 onPress={() => { authHandler(); }}
               />

@@ -1,5 +1,6 @@
 import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
+import { IMargin } from '../../../../styles/styleTypes';
 
 interface IField {
   value: string
@@ -8,7 +9,9 @@ interface IField {
   isSecure?: boolean
 }
 
-export const Field = (prop: IField) => {
+export const Field = (prop: IField & IMargin) => {
+  const {marginTop, marginRight, marginBottom = 20, marginLeft, margin} = prop;
+
   return (
     <TextInput
       placeholder={prop.placeholder}
@@ -16,7 +19,14 @@ export const Field = (prop: IField) => {
       onChangeText={prop.onChange}
       secureTextEntry={prop.isSecure}
       autoCapitalize='none'
-      style={styles.input}
+      style={{
+        marginTop,
+        marginRight,
+        marginBottom,
+        marginLeft,
+        margin,
+        ...styles.input
+      }}
     />
   );
 };
@@ -24,6 +34,7 @@ export const Field = (prop: IField) => {
 const styles = StyleSheet.create({
   input: {
     padding: 5,
+    paddingLeft: 15,
     backgroundColor: '#d7e7ed',
     borderRadius: 10,
     width: '100%'
