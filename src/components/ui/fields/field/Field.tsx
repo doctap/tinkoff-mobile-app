@@ -16,7 +16,7 @@ export const Field = (prop: IField & IMargin) => {
     <TextInput
       placeholder={prop.placeholder}
       value={prop.value}
-      onChangeText={prop.onChange}
+      onChangeText={(value) => prop.onChange(value.trim())}
       secureTextEntry={prop.isSecure}
       autoCapitalize='none'
       style={{
