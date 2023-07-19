@@ -3,7 +3,7 @@ import React from 'react';
 import { Avatar, PaddingContainer, Spinner } from '../..';
 import { useNavigation } from '@react-navigation/native';
 import { Entypo } from '@expo/vector-icons';
-import { ColorGrey800 } from '../../../themes';
+import { Grey800 } from '../../../themes';
 import { useProfile } from '../../../hooks';
 
 export const Header = () => {
@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   chevron: {
-    color: ColorGrey800
+    color: Grey800
   },
   container: {
     flex: 0,
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
     alignItems: 'center'
   },
   userName: {
-    color: ColorGrey800,
+    color: Grey800,
     fontSize: 22,
     fontWeight: '600',
     marginLeft: 10

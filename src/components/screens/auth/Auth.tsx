@@ -3,7 +3,7 @@ import { StyleSheet, Text, View, Pressable } from 'react-native';
 import { styleWrapper } from '../../../styles/styles';
 import { useAuth } from '../../../hooks';
 import { ButtonAction, Field, Spinner } from '../..';
-import { YellowActionButton, ColorGrey800 } from '../../../themes';
+import { YellowActionButton, Grey800 } from '../../../themes';
 
 interface IData {
   email: string
@@ -79,13 +79,13 @@ const styles = StyleSheet.create({
   },
   title: {
     textAlign: 'center',
-    color: ColorGrey800,
+    color: Grey800,
     fontWeight: 'bold',
     fontSize: 25,
     marginBottom: 20
   },
   pressable: {
-    color: ColorGrey800,
+    color: Grey800,
     opacity: 30,
     textAlign: 'right',
     fontSize: 14,

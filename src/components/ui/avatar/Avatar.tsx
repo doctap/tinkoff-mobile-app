@@ -1,7 +1,7 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
 import { AvatarSize } from '../../../types';
-import { ColorGrey300, ColorGrey800 } from '../../../themes';
+import { Grey300, Grey800 } from '../../../themes';
 
 interface IAvatar {
   name: string
@@ -27,7 +27,7 @@ export const Avatar = (prop: IAvatar) => {
 const style = StyleSheet.create({
   capsule: {
     borderRadius: 50,
-    backgroundColor: ColorGrey300,
+    backgroundColor: Grey300,
     flex: 0,
     justifyContent: 'center',
     alignItems: 'center',

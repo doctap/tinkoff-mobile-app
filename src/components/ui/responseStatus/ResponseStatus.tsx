@@ -1,6 +1,6 @@
 import React from 'react';
 import { Text, View, StyleSheet } from 'react-native';
-import { IMargin } from '../../../styles/styleTypes';
+import { IMargin } from '../../../styles';
 
 interface IResponseStatus {
   message: string

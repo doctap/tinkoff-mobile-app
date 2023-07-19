@@ -1,6 +1,6 @@
 import React from 'react';
 import { TextInput, StyleSheet } from 'react-native';
-import { IMargin } from '../../../../styles/styleTypes';
+import { IMargin } from '../../../../styles';
 
 interface IField {
   value: string
@@ -16,7 +16,7 @@ export const Field = (prop: IField & IMargin) => {
     <TextInput
       placeholder={prop.placeholder}
       value={prop.value}
-      onChangeText={(value) => prop.onChange(value.trim())}
+      onChangeText={value => prop.onChange(value)}
       secureTextEntry={prop.isSecure}
       autoCapitalize='none'
       style={{

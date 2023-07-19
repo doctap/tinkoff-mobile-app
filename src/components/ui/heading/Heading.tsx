@@ -1,14 +1,13 @@
 import React, { FC } from 'react';
 import { Text, StyleSheet } from 'react-native';
-import { ColorGrey800 } from '../../../themes';
+import { Grey800 } from '../../../themes';
 import { PaddingContainer } from '../';
+import { JustifyPositionType } from '../../../styles';
 
 interface IHeading {
   text: string
-  justify?: JustifyContentType
+  justify?: JustifyPositionType
 }
-
-export type JustifyContentType = 'flex-start' | 'center' | 'flex-end';
 
 export const Heading = (prop: IHeading) => {
   return (
@@ -24,7 +23,7 @@ export const Heading = (prop: IHeading) => {
 
 const styles = StyleSheet.create({
   heading: {
-    color: ColorGrey800,
+    color: Grey800,
     fontSize: 25,
     fontWeight: '600'
   }

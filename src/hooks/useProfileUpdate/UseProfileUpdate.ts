@@ -1,8 +1,8 @@
-import React, { useState } from "react";
-import { Alert } from "react-native";
-import { useAuth } from "../";
-import { doc, updateDoc } from "firebase/firestore";
-import { db } from "../../firebase";
+import React, { useState } from 'react';
+import { Alert } from 'react-native';
+import { useAuth } from '../';
+import { doc, updateDoc } from 'firebase/firestore';
+import { db } from '../../firebase';
 
 export const useProfileUpdate = (actualName: string, docId: string) => {
   const [isLoading, setIsLoading] = useState(false);

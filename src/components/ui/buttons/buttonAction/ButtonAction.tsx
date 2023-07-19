@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableHighlight, Text, StyleSheet } from 'react-native';
-import { IMargin } from '../../../../styles/styleTypes';
+import { IMargin } from '../../../../styles';
 
 interface IButtonAction {
   onPress: () => void

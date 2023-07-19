@@ -5,3 +5,5 @@ export * from './paddingContainer/PaddingContainer';
 export * from './avatar/Avatar';
 export * from './heading/Heading';
 export * from './responseStatus/ResponseStatus';
+export * from './stories/Stories';
+export * from './stories/StoryItem';

@@ -5,3 +5,5 @@ export interface IMargin {
   marginBottom?: number
   margin?: number
 }
+
+export type JustifyPositionType = 'flex-start' | 'center' | 'flex-end';
