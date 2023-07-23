@@ -5,3 +5,8 @@ export interface IStory {
   heading: string
   images: string[]
 }
+
+export interface IStoryType {
+  id: number
+  url: string
+}

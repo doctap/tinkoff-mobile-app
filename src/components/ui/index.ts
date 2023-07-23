@@ -7,3 +7,4 @@ export * from './heading/Heading';
 export * from './responseStatus/ResponseStatus';
 export * from './stories/Stories';
 export * from './stories/StoryItem';
+export * from './stories/StoryContainer';
